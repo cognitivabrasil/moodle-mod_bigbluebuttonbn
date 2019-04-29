@@ -2404,6 +2404,12 @@ function bigbluebuttonbn_settings_general(&$renderer) {
             $renderer->render_group_element_text('server_url', BIGBLUEBUTTONBN_DEFAULT_SERVER_URL));
         $renderer->render_group_element('shared_secret',
             $renderer->render_group_element_text('shared_secret', BIGBLUEBUTTONBN_DEFAULT_SHARED_SECRET));
+
+        $renderer->render_group_element('plugin_name',
+            $renderer->render_group_element_text('plugin_name', BIGBLUEBUTTONBN_DEFAULT_PLUGIN_NAME));
+        
+        $renderer->render_group_element('plugin_logo',
+            $renderer->render_group_element_image('plugin_logo'));
     }
 }
 

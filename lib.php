@@ -71,6 +71,13 @@ $CFG->bigbluebuttonbn['scheduled_duration_enabled'] = 0;
 
  /** @var BIGBLUEBUTTONBN_DEFAULT_SERVER_URL string of default bigbluebutton server url */
 const BIGBLUEBUTTONBN_DEFAULT_SERVER_URL = 'http://test-install.blindsidenetworks.com/bigbluebutton/';
+
+ /** @var BIGBLUEBUTTONBN_DEFAULT_PLUGIN_NAME string of default name of the plugin will be called since now */
+const BIGBLUEBUTTONBN_DEFAULT_PLUGIN_NAME = 'Elos';
+
+/** @var BIGBLUEBUTTONBN_DEFAULT_PLUGIN_LOGO string of default path to the logo that will be used for BBB */
+const BIGBLUEBUTTONBN_DEFAULT_PLUGIN_LOGO = 'colocar aqui a url do logo do Elos';
+
 /** @var BIGBLUEBUTTONBN_DEFAULT_SHARED_SECRET string of default bigbluebutton server shared secret */
 const BIGBLUEBUTTONBN_DEFAULT_SHARED_SECRET = '8cd8ef52e8e101574e400365b55e11a6';
 /** @var BIGBLUEBUTTONBN_LOG_EVENT_ADD string of event add for bigbluebuttonbn_logs */

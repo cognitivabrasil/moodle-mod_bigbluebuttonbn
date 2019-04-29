@@ -155,6 +155,25 @@ class renderer {
     }
 
     /**
+     * Render a image element in a group.
+     *
+     * @param string    $name
+     * @param object    $defaultsetting
+     * @param object    $choices
+     *
+     * @return Object
+     */
+    public function render_group_element_image($name) {
+            $title = get_string('config_' . $name, 'bigbluebuttonbn');
+            $description = get_string('config_' . $name . '_description', 'bigbluebuttonbn');
+            $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
+            $item = new \admin_setting_configstoredfile($name, $title, $description, 'logo', 0, $opts);
+            // $setting->set_updatedcallback('theme_reset_all_caches');
+            // $snapsettings->add($setting);
+        return $item;
+    }
+
+    /**
      * Render a general warning message.
      *
      * @param string    $name

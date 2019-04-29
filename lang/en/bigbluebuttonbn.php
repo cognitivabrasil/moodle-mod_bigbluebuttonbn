@@ -54,6 +54,11 @@ $string['config_server_url_description'] = 'The URL of your BigBlueButton server
 $string['config_shared_secret'] = 'BigBlueButton Shared Secret';
 $string['config_shared_secret_description'] = 'The security salt of your BigBlueButton server.  (This default salt is for a BigBlueButton server provided by Blindside Networks that you can use for testing.)';
 
+$string['config_plugin_name'] = 'Plugin Name';
+$string['config_plugin_name_description'] = 'Define the conference plugin name to be used in Moodle platform.';
+$string['config_plugin_logo'] = 'Plugin Logo';
+$string['config_plugin_logo_description'] = 'Define the logo to be used in Moodle platform for the conference system.';
+
 $string['config_recording'] = 'Configuration for "Record meeting" feature';
 $string['config_recording_description'] = 'These settings are feature specific';
 $string['config_recording_default'] = 'Recording feature enabled by default';
