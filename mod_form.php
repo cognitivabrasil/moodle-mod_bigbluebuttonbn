@@ -277,6 +277,14 @@ class mod_bigbluebuttonbn_mod_form extends moodleform_mod {
         }
         $this->bigbluebuttonbn_mform_add_element($mform, $field['type'], $field['name'], $field['data_type'],
             $field['description_key'], $cfg['recordings_preview_default']);
+        $field = ['type' => 'hidden', 'name' => 'recordings_get', 'data_type' => PARAM_INT,
+                  'description_key' => null];
+        if ($cfg['recordings_get_token']) {
+            $field['type'] = 'checkbox';
+            $field['description_key'] = 'mod_form_field_recordings_get';
+        }
+        $this->bigbluebuttonbn_mform_add_element($mform, $field['type'], $field['name'], $field['data_type'],
+            $field['description_key'], $cfg['recordings_get_token']);
 
     }
 
@@ -294,10 +302,11 @@ class mod_bigbluebuttonbn_mod_form extends moodleform_mod {
             $this->bigbluebuttonbn_mform_add_block_room_room($mform, $cfg);
         }
         if ($cfg['recordings_html_editable'] || $cfg['recordings_deleted_editable'] ||
-            $cfg['recordings_imported_editable'] || $cfg['recordings_preview_editable']) {
+            $cfg['recordings_imported_editable'] || $cfg['recordings_preview_editable']  || $cfg['recordings_get_token']) {
             $mform->addElement('header', 'recordings', get_string('mod_form_block_recordings', 'bigbluebuttonbn'));
             $this->bigbluebuttonbn_mform_add_block_room_recordings($mform, $cfg);
         }
+
     }
 
     /**

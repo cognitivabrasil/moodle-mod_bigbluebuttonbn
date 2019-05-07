@@ -1277,6 +1277,8 @@ function bigbluebuttonbn_get_recording_data_preview_enabled($bbbsession) {
     return ((double)$bbbsession['serverversion'] >= 1.0 && $bbbsession['bigbluebuttonbn']->recordings_preview == '1');
 }
 
+
+
 /**
  * Helper function converts recording date used in row for the data used by the recording table.
  *
@@ -2392,6 +2394,8 @@ function bigbluebuttonbn_settings_showrecordings(&$renderer) {
             $renderer->render_group_element_checkbox('recordings_preview_default', 1));
         $renderer->render_group_element('recordings_preview_editable',
             $renderer->render_group_element_checkbox('recordings_preview_editable', 0));
+        $renderer->render_group_element('recordings_get_token',
+            $renderer->render_group_element_checkbox('recordings_get_token', 0));
     }
 }
 
